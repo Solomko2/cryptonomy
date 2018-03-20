@@ -15,17 +15,15 @@ function fetchNews() {
 }
 
 function makeFetchNews() {
-    return function (dispatch) {
+    return async function (dispatch) {
         dispatch({type: GET_NEWS});
-
-        return fetchNews()
-            .then(response => response.json()
-                .then(data => (
-                        dispatch({type: GET_NEWS_SUCCESS, payload: data, status: response.status})
-                    ),
-                    error => dispatch({type: GET_NEWS_FAILURE, error})
-                )
-            );
+        try {
+            const response = await fetchNews();
+            const json = await response.json();
+            dispatch({type: GET_NEWS_SUCCESS, payload: json, status: response.status})
+        } catch(err) {
+            dispatch({type: GET_NEWS_FAILURE, err})
+        }
     };
 }
 
@@ -45,7 +43,7 @@ export default (state = initialState, action) => {
                 loaded : true,
                 list   : action.payload,
                 status : action.status,
-                count: action.payload.length
+                count  : action.payload.length
             };
 
         case GET_NEWS_FAILURE:
