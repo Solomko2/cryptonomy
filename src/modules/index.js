@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import news from './news';
+import * as fromNewsReducer from './news/+state/reducers/index';
 
 export default combineReducers({
     router: routerReducer,
-    news
+    news: fromNewsReducer.reducers.news
 });
+
+export * from './news/containers/index';
+
