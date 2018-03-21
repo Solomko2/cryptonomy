@@ -1,7 +1,10 @@
-import News from './news-page';
+import News from './NewsPage';
+import NewsList from './NewsList';
 
 export const containers = {
-    News
+    News,
+    NewsList
 };
 
-export * from './news-page';
+export * from './NewsPage';
+export * from './NewsList';

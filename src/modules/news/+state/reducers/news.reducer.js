@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
                 ...state,
                 pending: false,
                 loaded : true,
-                list   : action.payload,
+                list   : action.payload.data,
                 status : action.status,
                 count  : action.payload.length
             };
@@ -37,11 +37,3 @@ export default (state = initialState, action) => {
             return state;
     }
 };
-
-export const mapStateToProps = state => ({
-    list   : state.news.list,
-    count  : state.news.count,
-    pending: state.news.pending,
-    loaded : state.news.loaded,
-    status : state.news.status
-});

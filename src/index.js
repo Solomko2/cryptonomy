@@ -8,9 +8,6 @@ import App from './modules/app';
 import registerServiceWorker from './registerServiceWorker';
 const target = document.getElementById('root');
 
-//additional
-// import 'semantic-ui-css/semantic.min.css';
-
 ReactDOM.render(
     <Provider store={store}>
         <ConnectedRouter history={history}>
