@@ -23,8 +23,8 @@ export default (state = initialState, action) => {
                 pending: false,
                 loaded : true,
                 list   : action.payload.data,
-                status : action.status,
-                count  : action.payload.length
+                status : action.payload.status,
+                count  : action.payload.data.length
             };
 
         case fromNewsActionTypes.GET_NEWS_FAILURE:
