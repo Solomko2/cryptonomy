@@ -2,13 +2,12 @@ import React from 'react';
 import {push} from 'react-router-redux';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { Header, Button} from 'semantic-ui-react';
 
 const Home = props => (
     <div>
-        <h1>Home</h1>
-        <button onClick={props.changePage}>
-            Go to news
-        </button>
+        <Header as='h1'>Home</Header>
+        <Button primary onClick={props.changePage}>Go to news</Button>
     </div>
 );
 
