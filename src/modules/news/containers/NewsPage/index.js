@@ -12,20 +12,20 @@ class News extends Component {
         const { count, status, pending, loaded, list, getNews } = this.props;
 
         return (
-            <div className='wrap'>
+            <div className='flex flex-dir-col flex-ali-start'>
                 <Header as='h1'>News</Header>
                 <Message icon>
                     <Icon name='inbox' />
                     <Message.Content>
                         <Message.Header as='h3'>Info</Message.Header>
                         <div>Count: {count}</div>
-                        <div>Status: {status}</div>
+                        {/*<div>Status: {status}</div>*/}
                         <div>Pending: {pending ? 'Pending' : 'No'}</div>
                         <div>Loading: {loaded ? 'Loaded' : 'No'}</div>
                     </Message.Content>
                 </Message>
 
-                <Button primary onClick={ () => getNews() }>Get news</Button>
+                <Button primary onClick={ () => getNews('a', 'a') }>Get news</Button>
 
                 <NewsList list={list}/>
             </div>

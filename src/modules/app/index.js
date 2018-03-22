@@ -8,8 +8,8 @@ import { Menu } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
 const App = () => (
-    <div className='wrap'>
-        <Menu>
+    <div className='wrap flex flex-ali-start'>
+        <Menu vertical>
             <Menu.Item
                 name='home'
                 to='/'

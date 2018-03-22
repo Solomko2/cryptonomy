@@ -8,10 +8,6 @@ body {
   max-width: 767px;
   position: relative;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 10px 15px;
 }
 
@@ -19,8 +15,38 @@ body {
   width: 100%;
 }
 
+main {
+  padding: 20px;
+}
+
 .ui.items > .item {
   padding: 15px !important;
   border-radius: 5px !important;
   border: 1px solid #ccc !important;
+}
+
+/*flex*/
+
+.flex {
+  display: flex;
+}
+
+.flex-dir-col {
+  flex-direction: column;
+}
+
+.flex-ali-center {
+  align-items: center;
+}
+
+.flex-ali-start {
+  align-items: flex-start;
+}
+
+.flex-ali-end {
+  align-items: flex-end;
+}
+
+.flex-jus-center {
+  justify-content: center;
 }
