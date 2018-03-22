@@ -25,7 +25,7 @@ class News extends Component {
                     </Message.Content>
                 </Message>
 
-                <Button primary onClick={ () => getNews('a', 'a') }>Get news</Button>
+                <Button primary onClick={ () => getNews() }>Get news</Button>
 
                 <NewsList list={list}/>
             </div>
