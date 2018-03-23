@@ -21,7 +21,7 @@ class News extends Component {
                         <div>Count: {count}</div>
                         {/*<div>Status: {status}</div>*/}
                         <div>Pending: {pending ? 'Pending' : 'No'}</div>
-                        <div>Loading: {loaded ? 'Loaded' : 'No'}</div>
+                        <div>Loaded: {loaded ? 'Loaded' : 'No'}</div>
                     </Message.Content>
                 </Message>
 
